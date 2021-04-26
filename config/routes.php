@@ -48,6 +48,7 @@ $routes->setRouteClass(DashedRoute::class);
 Router::prefix('api', function ( $routes) {
     $routes->setExtensions(['json', 'xml']);
     $routes->resources('Users');
+    $routes->resources('Services');
     $routes->fallbacks('InflectedRoute');
 });
 
