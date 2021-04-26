@@ -35,7 +35,7 @@ class UsersController extends AppController
             $payload = [
                 'iss' => 'myapp',
                 'sub' => $user->id,
-                'exp' => time() + 60*60*24,
+                'exp' => time() + 60,
             ];
             $json = [
                 'token' => JWT::encode($payload, $privateKey, 'RS256'),
